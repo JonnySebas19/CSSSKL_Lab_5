@@ -1,9 +1,6 @@
 import java.util.Objects;
 
-//TODO: if you use this class because you dont have your
-//previous SimpleColor, you must document the code with comments
-//and fix the setters so they don't invalidate the [0-255] rule
-public class SimpleColor {
+public class SimpleColor { // Class Invariant: colors are 0-225 inclusive
 	private int r;
 	private int g;
 	private int b;
