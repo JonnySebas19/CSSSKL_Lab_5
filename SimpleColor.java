@@ -22,7 +22,7 @@ public class SimpleColor { // Class Invariant: colors are 0-225 inclusive
 		return g;
 	}
 
-	public void setG(int g) throws ColorException {
+	public void setG(int g){
 		if (g < 0 || g > 255) {
 			throw new ColorException();
 		} else {
@@ -34,7 +34,7 @@ public class SimpleColor { // Class Invariant: colors are 0-225 inclusive
 		return b;
 	}
 
-	public void setB(int b) throws ColorException {
+	public void setB(int b){
 		if (b < 0 || b > 255) {
 			throw new ColorException();
 		} else {
@@ -72,5 +72,11 @@ public class SimpleColor { // Class Invariant: colors are 0-225 inclusive
 
 		SimpleColor that = (SimpleColor) o;
 		return this.r == that.r && this.g == that.g && this.b == that.b;
+	}
+	public static void main (String[] args){
+		SimpleColor color1 = new SimpleColor(20, 20, 20);
+		SimpleColor color2 = new SimpleColor(200, 250, 250);
+		System.out.println(color1);
+		System.out.println(color2);
 	}
 }
