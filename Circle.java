@@ -1,5 +1,6 @@
+import java.awt.*;
 public class Circle extends Shape {
-    public int radius;
+    private int radius;
     public Circle( int newX, int newY, int newRadius){
         super(newX, newY);
         this.radius = newRadius;
@@ -11,4 +12,12 @@ public class Circle extends Shape {
     public int getRadius(){
         return radius;
     }
+    public void setRadius(int newRadius){
+        this.radius = newRadius;
+    }
+    @Override
+    public void draw(Graphics g){
+        g.drawOval(getX(), getY(), radius, radius);
+    }
+
 }
